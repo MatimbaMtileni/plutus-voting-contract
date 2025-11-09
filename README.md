@@ -70,26 +70,3 @@ cabal test voting-test
 Apache 2.0
 
 
-## 14. `start-vscode.sh`
-
-```bash
-#!/bin/bash
-
-echo "Setting up Plutus Voting Contract in VSCode..."
-
-# Check if nix is installed
-if ! command -v nix &> /dev/null; then
-    echo "Error: Nix is not installed. Please install Nix first."
-    echo "Visit: https://nixos.org/download.html"
-    exit 1
-fi
-
-# Enter the development shell
-echo "Entering development environment..."
-nix develop
-
-echo "Setup complete! You can now:"
-echo "1. Open VSCode: code ."
-echo "2. Build: cabal build"
-echo "3. Test: cabal test"
-echo "4. Run REPL: cabal repl"
