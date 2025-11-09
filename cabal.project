@@ -1,0 +1,20 @@
+packages: .
+
+package voting-contract
+  flags: +development
+
+-- Add Plutus dependencies
+source-repository-package
+  type: git
+  location: https://github.com/input-output-hk/plutus-apps.git
+  tag: plutus-apps-v1.1.0
+  subdir:
+    plutus-ledger-api
+    plutus-tx
+    plutus-contract
+
+-- Optional: Add cardano-node and cardano-cli
+-- source-repository-package
+--   type: git
+--   location: https://github.com/input-output-hk/cardano-node.git
+--   tag: 1.35.7
